@@ -1,8 +1,8 @@
 # Python-Neural-Network
-a simple deep neural network I made on my quest to understand machine learning and neural networks.
+A simple deep neural network I made on my quest to understand machine learning and neural networks.
 
 ## The Network
-the network is a multiplayer deep neural with a variable number of input nodes, hidden layers, hidden nodes in those layers, output nodes, and training epochs. It is a deep neural network but it is probably not the most efficient code.
+The network is a multiplayer deep neural with a variable number of input nodes, hidden layers, hidden nodes in those layers, output nodes, and training epochs. It is a deep neural network but it is probably not the most efficient code.
 the network is object oriented, so you can bring it in to your program by importing the file and creating a variable for a neural network. The network takes in 5 variable for the constructor function. the number of inputs, layers, hiddens, outputs, and epochs in that order.
 ### Functions
 * setLearningRate - sets the networks learning rate.
@@ -12,14 +12,14 @@ the network is object oriented, so you can bring it in to your program by import
 * train - uses backpropagation and stochastic gradient descent to train the network.
 * process - uses feedforward to guess the output of an input.
 ### Training
-training the network involves creating a for loop over the networks epochs, creating an list with a random entry from your training set and another list with the cooresponding label inside the loop, and using the **.train** function with the data and the label.  
+Training the network involves creating a for loop over the networks epochs, creating an list with a random entry from your training set and another list with the cooresponding label inside the loop, and using the **.train** function with the data and the label.  
 ![epochs](https://i.imgur.com/9JVRjhB.png)
 ![Training](https://i.imgur.com/DQp5Y3t.png)
 ### Testing/Predicting
-testing the network and using it to predict data involves using the **.process** function on your testing set and unknown set.
+Testing the network and using it to predict data involves using the **.process** function on your testing set and unknown set.
 ![guessing](https://i.imgur.com/iPCENrD.png)
 ## The current test program
-currently the network is being tested on XOR. It outputs every epoch for the training cycle and then when it is finished training it displays the networks guess and graphs the error.
+Currently the network is being tested on XOR. It outputs every epoch for the training cycle and then when it is finished training it displays the networks guess and graphs the error.
 ![guesses](https://i.imgur.com/4mbQmLi.png)   
 ![error](https://i.imgur.com/LFpAf3Q.png)
 ### To Do
