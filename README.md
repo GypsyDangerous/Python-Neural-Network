@@ -13,8 +13,8 @@ testing the network and using it to predict data involves using the **.process**
 ![guessing](https://i.imgur.com/iPCENrD.png)
 ## the current test program
 currently the network is being tested on XOR. It outputs every epoch for the training cycle and then when it is finished training it displays the networks guess and graphs the error.
-[guesses](https://i.imgur.com/4mbQmLi.png)  
-[error](https://i.imgur.com/LFpAf3Q.png)
+![guesses](https://i.imgur.com/4mbQmLi.png)   
+![error](https://i.imgur.com/LFpAf3Q.png)
 ### to do
 - [ ] fix mse and rmse - currently they are my best guess as to how those function work, but they could very well be wrong
 - [ ] refactor
