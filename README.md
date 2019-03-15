@@ -28,6 +28,7 @@ currently the network is being tested on XOR. It outputs every epoch for the tra
 - [ ] add more documentation with commments inside the code
 - [ ] add functionality for easy switching between different activation functions
 - [ ] add more activation functions
+- [ ] run this network on MNIST or similiar dataset
 
 ### credits and links to learn more
 [The Coding Train](https://www.youtube.com/user/shiffman) introduced me to [neural networks](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Y7MdSCaIfsxc561QI0U0Tb).  
