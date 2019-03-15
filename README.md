@@ -28,7 +28,7 @@ Currently the network is being tested on XOR. It outputs every epoch for the tra
 ![error](https://i.imgur.com/LFpAf3Q.png)
 ### To Do
 
-- [ ] fix mse and rmse - currently they are my best guess as to how those function work, but they could very well be wrong
+- [ ] fix mse and rmse - currently they are my best guess as to how those function work, but they could very well be wrong #2
 - [ ] add other loss functions like rmse
 - [ ] add recurent neural network class
 - [ ] refactor the code
