@@ -1,5 +1,5 @@
 # simple-deep-neural-network
-a simple deep neural network I made in python only using numpy.
+a simple deep neural network I made on my quest to understand machine learning and neural networks.
 
 ## The Network
 the network is a multiplayer deep neural with a variable number of input nodes, hidden layers, hidden nodes in those layers, output nodes, and training epochs. It is a deep neural network but it is probably not the most efficient code.
@@ -24,6 +24,8 @@ currently the network is being tested on XOR. It outputs every epoch for the tra
 ![error](https://i.imgur.com/LFpAf3Q.png)
 ### to do
 - [ ] fix mse and rmse - currently they are my best guess as to how those function work, but they could very well be wrong
+- [ ] add other loss functions like rmse
+- [ ] add recurent neural network class
 - [ ] refactor the code
 - [ ] add more documentation with commments inside the code
 - [ ] add functionality for easy switching between different activation functions
