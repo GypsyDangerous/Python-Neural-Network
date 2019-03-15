@@ -52,6 +52,13 @@ class perceptron:
 		return self.learningRate
 
 	def train(self, inputArray, goalArray):
+		
+		if(len(inputArray) != self.inputNodes):
+			raise Exception("the number of inputs must match the number of inputNodes")
+			
+		if(len(goalArray) != self.inputNodes):
+			raise Exception("the number of targets must match the number of outputNodes")
+		
 		inputs = np.array(inputArray)
 		inputs = inputs.reshape(2, 1)
 		targets = np.array(goalArray)
