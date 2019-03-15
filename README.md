@@ -11,6 +11,8 @@ training the network involves creating a for loop over the networks epochs, crea
 ### testing/predicting
 testing the network and using it to predict data involves using the **.process** function on your testing set and unknown set.
 ![guessing](https://i.imgur.com/iPCENrD.png)
+## the current test program
+currently the network is being tested on XOR
 ### to do
 - [ ] fix mse and rmse - currently they are my best guess as to how those function work, but they could very well be wrong
 - [ ] refactor
