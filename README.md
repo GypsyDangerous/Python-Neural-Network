@@ -1,5 +1,5 @@
 # Python-Neural-Network
-A simple deep neural network I made on my quest to understand machine learning and neural networks.
+A simple deep neural network I made in python on my quest to understand machine learning and neural networks.
 
 ## The Network
 The network is a multiplayer deep neural with a variable number of input nodes, hidden layers, hidden nodes in those layers, output nodes, and training epochs. It is a deep neural network but it is probably not the most efficient code.
