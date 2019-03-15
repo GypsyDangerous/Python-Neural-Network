@@ -1,3 +1,4 @@
+# Neural Network Test
 def percent(x, total):
 	return truncate((x/total)*100)
 
