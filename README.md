@@ -39,3 +39,4 @@ Currently the network is being tested on XOR. It outputs every epoch for the tra
 * [online book](http://neuralnetworksanddeeplearning.com/) that helped me understand the math.  
 * [3blue1brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw) on [neural networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi), on [calculus](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr), on [linear algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab).  
 * [Khan Academy](https://www.khanacademy.org/).
+* [Brilliant](https://brilliant.org/)
