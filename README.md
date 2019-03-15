@@ -2,7 +2,7 @@
 A simple deep neural network I made in python on my quest to understand machine learning and neural networks.
 
 ## The Network
-The network is a deep neural network with 5 hyperparameters, the nummber of input nodes, hidden layers, hidden nodes in those layers, output nodes, and training epochs. Though it is a deep neural network it is not the most efficient code.
+The network is a deep neural network with 5 variable nummber of input nodes, hidden layers, hidden nodes in those layers, output nodes, and training epochs. Though it is a deep neural network it is not the most efficient code.
 the network is object oriented, so you can bring it in to your program by importing the file ``perceptron.py`` and creating a variable for a neural network. The network takes in 5 variables for the constructor function. the number of inputs, layers, hiddens, outputs, and epochs, in that order.
 ### Functions
 
