@@ -29,7 +29,7 @@ Currently the network is being tested on XOR. It outputs every epoch for the tra
 ### To Do
 
 - [ ] fix mse and rmse - currently they are my best guess as to how those function work, but they could very well be wrong [#2](https://github.com/GypsyDangerous/Python-Neural-Network/issues/2)
-- [ ] add other loss functions like rmse
+- [ ] add other loss functions like cross entropy
 - [ ] add recurent neural network class
 - [ ] refactor the code
 - [ ] add more documentation with commments inside the code
