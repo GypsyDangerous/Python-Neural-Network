@@ -2,9 +2,9 @@ def percent(x, total):
 	return truncate((x/total)*100)
 
 dataset = [[1,0,1],
-			[0,1,1],
-			[1,1,0],
-			[0,0,0]]
+	[0,1,1],
+	[1,1,0],
+	[0,0,0]]
 
 brain = perceptron(2, 1, 50, 1, 20000)
 epochs = brain.getEpochs()
