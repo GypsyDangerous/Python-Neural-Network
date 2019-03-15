@@ -11,6 +11,7 @@ def tanh(x):
 def tanh_p(x):
 	return 1 - x * x
 
+# Neural Network Class
 class perceptron:
 	def __init__(self, inputs, layers, hidden, output, epochs):
 		self.inputNodes = int(inputs)
