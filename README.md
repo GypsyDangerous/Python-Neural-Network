@@ -1,16 +1,16 @@
 # simple-deep-neural-network
-a simple deep neural network i made in python
+a simple deep neural network I made in python only using numpy.
 
 ## The Network
 the network is a multiplayer deep neural with a variable number of input nodes, hidden layers, hidden nodes in those layers, output nodes, and training epochs. It is a deep neural network but it is probably not the most efficient code.
 the network is object oriented, so you can bring it in to your program by importing the file and creating a variable for a neural network. The network takes in 5 variable for the constructor function. the number of inputs, layers, hiddens, outputs, and epochs in that order.
 ### functions
-* setLearningRate - sets the networks learning rate
-* getLearningRate - returns the networks learning rate
-* setEpochs - sets the networks training epochs
-* getEpochs - returns the networks training epochs
-* train - uses backpropagation and stochastic gradient descent to train the network
-* process - uses feedforward to guess the output of an input
+* setLearningRate - sets the networks learning rate.
+* getLearningRate - returns the networks learning rate.
+* setEpochs - sets the networks training epochs.
+* getEpochs - returns the networks training epochs.
+* train - uses backpropagation and stochastic gradient descent to train the network.
+* process - uses feedforward to guess the output of an input.
 ### training
 training the network involves creating a for loop over the networks epochs, creating an list with a random entry from your training set and another list with the cooresponding label inside the loop, and using the **.train** function with the data and the label.  
 ![epochs](https://i.imgur.com/9JVRjhB.png)
@@ -24,7 +24,7 @@ currently the network is being tested on XOR. It outputs every epoch for the tra
 ![error](https://i.imgur.com/LFpAf3Q.png)
 ### to do
 - [ ] fix mse and rmse - currently they are my best guess as to how those function work, but they could very well be wrong
-- [ ] refactor
+- [ ] refactor the code
 - [ ] add more documentation with commments inside the code
 - [ ] add functionality for easy switching between different activation functions
 - [ ] add more activation functions
