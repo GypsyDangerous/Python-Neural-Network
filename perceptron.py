@@ -1,18 +1,17 @@
 import numpy as np
-def sigmoid(x):
-	return 1/(1+np.exp(-x))
+import os
+import random
+from activations import sigmoid, sigmoid_p
 
-def sigmoid_p(x):
-	return x * (1-x)
+# percentage and truncate functions used in displaying training completion
+def truncate(x, level):
+	return int(x*level)/level
 
-def tanh(x):
-	return np.tanh(x)
+def percent(x, total, level):
+	return truncate((x/total)*100, level)
 
-def tanh_p(x):
-	return 1 - x * x
-
-# Neural Network Class
 class perceptron:
+	# initialize the Network with hyperparameters
 	def __init__(self, inputs, layers, hidden, output, epochs):
 		self.inputNodes = int(inputs)
 		self.hiddenlayers = int(layers)
@@ -52,14 +51,18 @@ class perceptron:
 	def getLearningRate(self):
 		return self.learningRate
 
+	def fit(self, training_data):
+		datasize = len(training_data)
+		for i in range(self.epochs):
+			index = np.random.randint(datasize)
+			data = training_data[index]
+			data_len = len(data)-1
+			info = data[0]
+			goal = data[1]
+			self.train(info, goal)
+			print("epoch: %d, error: %f, %g%% complete" % (i, self.mse(info, goal), percent(i, self.epochs-1, 100)))
+
 	def train(self, inputArray, goalArray):
-		
-		if(len(inputArray) != self.inputNodes):
-			raise Exception("the number of inputs must match the number of inputNodes")
-			
-		if(len(goalArray) != self.inputNodes):
-			raise Exception("the number of targets must match the number of outputNodes")
-		
 		inputs = np.array(inputArray)
 		inputs = inputs.reshape(2, 1)
 		targets = np.array(goalArray)
@@ -79,7 +82,7 @@ class perceptron:
 		for i in range(self.hiddenlayers+1, 0, -1):
 
 			# calculate the networks error
-			error = (targets - layers[i])
+			error = targets - layers[i]
 
 			# calculate the gradient of the network function
 			gradient = sigmoid_p(layers[i])
@@ -122,3 +125,5 @@ class perceptron:
 	# calculate the root mean squared error
 	def rmse(self, inputArray, goalArray):
 		return sqrt((self.mse(inputArray, goalArray)/4))
+
+
