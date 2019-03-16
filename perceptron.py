@@ -64,7 +64,7 @@ class perceptron:
 
 	def train(self, inputArray, goalArray):
 		inputs = np.array(inputArray)
-		inputs = inputs.reshape(2, 1)
+		inputs = inputs.reshape(self.inputNodes, 1)
 		targets = np.array(goalArray)
 		targets.reshape(self.outputNodes, 1)
 		layers = []
