@@ -26,7 +26,7 @@ the network is object oriented, so you can bring it in to your program by import
 
 ### Training
 
-Training the network involves creating a for loop over the networks epochs, creating an list with a random entry from your training set and another list with the cooresponding label inside the loop, and using the **.train** function with the data and the label.  
+Training the network involves creating a for loop over the networks epochs, creating an list with a random entry from your training set and another list with the cooresponding label inside the loop, and using the ``.train`` function with the data and the label. or simply calling ``.fit`` on your training data.  
 ![epochs](https://i.imgur.com/9JVRjhB.png)
 ![Training](https://i.imgur.com/DQp5Y3t.png)
 
@@ -37,9 +37,10 @@ Testing the network and using it to predict data involves using the **.process**
 
 ## The current test program
 
-Currently the network is being tested on XOR. It outputs every epoch for the training cycle and then when it is finished training it displays the networks guess and graphs the error.
+Currently the network is being tested on XOR. It outputs every epoch for the training cycle and then when it is finished training it displays the networks guess and graphs the error.  
 ![guesses](https://i.imgur.com/4mbQmLi.png)   
-![error](https://i.imgur.com/LFpAf3Q.png)
+![error](https://i.imgur.com/LFpAf3Q.png)  
+![fit](https://i.imgur.com/6oVoRrw.png)
 
 ## To Do List
 
