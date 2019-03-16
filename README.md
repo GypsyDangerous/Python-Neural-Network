@@ -20,7 +20,7 @@ the network is object oriented, so you can bring it in to your program by import
 * getLearningRate - returns the networks learning rate.
 * setEpochs - sets the networks training epochs.
 * getEpochs - returns the networks training epochs.
-* **coming soon** fit - run the train function on the training data ``self.epochs`` number of times
+* fit - run the train function on the training data ``self.epochs`` number of times
 * train - uses backpropagation and stochastic gradient descent to train the network.
 * process - uses feedforward to guess the output of an input.
 
