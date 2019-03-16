@@ -4,7 +4,7 @@ A simple deep neural network I made in python on my quest to understand machine 
 
 ## The Network
 
-The network is a deep neural network with 5 variable nummber of input nodes, hidden layers, hidden nodes in those layers, output nodes, and training epochs. Though it is a deep neural network it is not the most efficient code.
+The network is a simple deep neural network with 5 variable nummber of input nodes, hidden layers, hidden nodes in those layers, output nodes, and training epochs. Though it is a deep neural network it is not the most efficient code.
 the network is object oriented, so you can bring it in to your program by importing the file ``perceptron.py`` and creating a variable for a neural network. The network takes in 5 variables for the constructor function. the number of inputs, layers, hiddens, outputs, and epochs, in that order.
 
 ### Functions
@@ -13,6 +13,7 @@ the network is object oriented, so you can bring it in to your program by import
 * getLearningRate - returns the networks learning rate.
 * setEpochs - sets the networks training epochs.
 * getEpochs - returns the networks training epochs.
+* **coming soon** fit - run the train function on the training data ``self.epochs`` number of times
 * train - uses backpropagation and stochastic gradient descent to train the network.
 * process - uses feedforward to guess the output of an input.
 
@@ -35,14 +36,15 @@ Currently the network is being tested on XOR. It outputs every epoch for the tra
 
 ## To Do List
 
-- [ ] fix mse and rmse - currently they are my best guess as to how those function work, but they could very well be wrong [#2](https://github.com/GypsyDangerous/Python-Neural-Network/issues/2)
+- [ ] fix mse and rmse - currently they are my best guess as to how those function work, but they could very well be wrong (see [#2](https://github.com/GypsyDangerous/Python-Neural-Network/issues/2))
 - [ ] add other loss functions like cross entropy
-- [ ] add recurent neural network class
 - [ ] refactor the code
 - [ ] add more documentation with commments inside the code
 - [ ] add functionality for easy switching between different activation functions
 - [ ] add more activation functions
+- [ ] add functionality for mini batch training
 - [ ] run this network on MNIST or similiar dataset
+- [ ] add recurent neural network and convolutional neural network
 
 ## Credits and links to learn more
 
