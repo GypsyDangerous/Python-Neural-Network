@@ -2,6 +2,13 @@
 
 A simple deep neural network I made in python on my quest to understand machine learning and neural networks.
 
+
+## Files
+* ``ai.py`` - testing the neural network
+* ``perceptron.py`` - the actual neural network
+* ``activations.py`` - different activation functions for the network
+
+
 ## The Network
 
 The network is a simple deep neural network with 5 variable nummber of input nodes, hidden layers, hidden nodes in those layers, output nodes, and training epochs. Though it is a deep neural network it is not the most efficient code.
