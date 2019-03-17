@@ -39,32 +39,46 @@ class perceptron:
 			else:
 				self.biases.append(2*np.random.rand(self.hiddenNodes, 1)-1)
 
+
 	def setEpochs(self, x):
 		self.epochs = x
+
 
 	def getEpochs(self):
 		return self.epochs
 
+
 	def setLearningRate(self, x):
 		self.learningRate = x
+
 
 	def getLearningRate(self):
 		return self.learningRate
 
-	def fit(self, training_data):
-		datasize = len(training_data)
+
+	# automatically prepare the data from given training data and labels and run the train function epochs number of times
+	def fit(self, input_data, labels):
+
+		# error checking
+		if len(input_data) > len(labels):
+			raise Exception("Your have more data points than labels")
+
+		if len(input_data) < len(labels):
+			raise Exception("Your have more labels points than data points")
+
+		datasize = len(input_data)
 		for i in range(self.epochs):
 			index = np.random.randint(datasize)
-			data = training_data[index]
-			data_len = len(data)-1
-			info = data[0]
-			goal = data[1]
+			info = input_data[index]
+			goal = labels[index]
 			self.train(info, goal)
 			print("epoch: %d, error: %f, %g%% complete" % (i, self.mse(info, goal), percent(i, self.epochs-1, 100)))
 
+
+	# train the network with backpropagation and stochastic gradient descent
 	def train(self, inputArray, goalArray):
 		inputs = np.array(inputArray)
-		inputs = inputs.reshape(self.inputNodes, 1)
+		inputs = inputs.reshape(2, 1)
 		targets = np.array(goalArray)
 		targets.reshape(self.outputNodes, 1)
 		layers = []
@@ -102,8 +116,7 @@ class perceptron:
 			t += layers[i-1]
 			targets = t
 
-
-
+	# feed the inputs forward through the network
 	def process(self, inputArray):
 		if(len(inputArray) != self.inputNodes):
 			raise Exception("the number of inputs must match the number of inputNodes")
@@ -117,12 +130,14 @@ class perceptron:
 			inputs = sigmoid(inputs)
 		return inputs
 
-	# calculate the mean squared error
+
+	# calculate the mean squared error, could be incorrect
 	def mse(self, inputArray, goalArray):
 		guess = self.process(inputArray)
 		return np.sum((goalArray-guess)**2)/len(goalArray)
 
-	# calculate the root mean squared error
+
+	# calculate the root mean squared error, could be incorrect
 	def rmse(self, inputArray, goalArray):
 		return sqrt((self.mse(inputArray, goalArray)/4))
 
