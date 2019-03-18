@@ -43,7 +43,7 @@ To test the network, simply use ``.test`` on you testdata and testlabels, To use
 
 ## The current test program
 
-Currently the network is being tested on XOR. It outputs every epoch for the training cycle and then when it is finished training it displays the networks guess and graphs the error.  
+Currently the network is being tested on XOR. It outputs every epoch for the training cycle and then when it is finished training it displays the networks guess and graphs the error. you can see the network run on MNIST data [here](https://github.com/GypsyDangerous/MNIST-digit-classifier/blob/master/README.md)
 ![guesses](https://i.imgur.com/4mbQmLi.png)   
 ![error](https://i.imgur.com/LFpAf3Q.png)  
 
@@ -56,7 +56,7 @@ Currently the network is being tested on XOR. It outputs every epoch for the tra
 - [ ] add functionality for easy switching between different activation functions
 - [ ] add more activation functions
 - [ ] add functionality for mini batch training
-- [x] run this network on MNIST or similiar dataset [here](https://github.com/GypsyDangerous/MNIST-digit-classifier/blob/master/README.md)
+- [x] run this network on MNIST or similiar dataset [here](https://github.com/GypsyDangerous/MNIST-digit-classifier)
 - [ ] add recurent neural network and convolutional neural network
 
 ## Credits and links to learn more
