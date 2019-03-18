@@ -38,7 +38,7 @@ Training the network involves creating a for loop over the networks epochs, crea
 
 ### Testing/Predicting
 
-Testing the network and using it to predict data involves using the **.process** function on your testing set and unknown set.
+To test the network, simply use ``.test`` on you testdata and testlabels, To use it for predictions, either use the ``.process`` function on a single piece of unknown data or ``.process_all`` on a bunch of unknowns.
 ![guessing](https://i.imgur.com/iPCENrD.png)
 
 ## The current test program
