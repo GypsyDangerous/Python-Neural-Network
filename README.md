@@ -23,6 +23,9 @@ the network is object oriented, so you can bring it in to your program by import
 * fit - run the train function on the training data ``self.epochs`` number of times
 * train - uses backpropagation and stochastic gradient descent to train the network.
 * process - uses feedforward to guess the output of an input.
+* process_all - takes in a collection of unknown data and outputs the guess for each.
+* test - takes in training data and training labels, runs the data through the network, compares to the label and gives you the networks accuracy.
+
 
 ### Training
 
