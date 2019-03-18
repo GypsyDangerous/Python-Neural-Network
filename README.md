@@ -12,7 +12,7 @@ A simple deep neural network I made in python on my quest to understand machine 
 
 ## Installation
 
-The only non-native library that this program uses is numpy, so to use this neural network class all you have to is make sure you have python installed and you have installed numpy with pip and then download the files and run from your preffered method of python execution.
+The only non-native module that this program uses is numpy, so to use this neural network class all you have to is make sure you have python installed and you have installed numpy with pip and then download the files and run from your preffered method of python execution.
 
 
 ## The Network
