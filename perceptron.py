@@ -4,11 +4,20 @@ import random
 from activations import sigmoid, sigmoid_p
 
 # percentage and truncate functions used in displaying training completion
-def truncate(x, level):
+def truncate(x, level=100):
 	return int(x*level)/level
 
-def percent(x, total, level):
+def percent(x, total=100, level=100):
 	return truncate((x/total)*100, level)
+
+def largest_index(guess):
+	biggest = 0
+	biggestIndex = 0
+	for i in range(len(guess)):
+		if guess[i] > biggest:
+			biggest = guess[i]
+			biggestIndex = i
+	return biggestIndex
 
 class perceptron:
 	# initialize the Network with hyperparameters
@@ -72,15 +81,16 @@ class perceptron:
 			info = input_data[index]
 			goal = labels[index]
 			self.train(info, goal)
-			print("epoch: %d, error: %f, %g%% complete" % (i, self.mse(info, goal), percent(i, self.epochs-1, 100)))
+			if (i+1) % 100 == 0:
+				print("epoch: %d, error: %f, %g%% complete" % (i+1, self.mse(info, goal), percent(i, self.epochs-1, 100)))
 
 
 	# train the network with backpropagation and stochastic gradient descent
 	def train(self, inputArray, goalArray):
 		inputs = np.array(inputArray)
-		inputs = inputs.reshape(2, 1)
+		inputs = inputs.reshape(self.inputNodes, 1)
 		targets = np.array(goalArray)
-		targets.reshape(self.outputNodes, 1)
+		targets = targets.reshape(self.outputNodes, 1)
 		layers = []
 		layers.append(inputs)
 
@@ -111,15 +121,50 @@ class perceptron:
 			self.weights[i-1] += delta
 
 			# reset for the next layer
-			t = self.weights[i-1].T
-			t = np.dot(t, error)
-			t += layers[i-1]
-			targets = t
+			temp = self.weights[i-1].T
+			temp = np.dot(temp, error)
+			temp += layers[i-1]
+			targets = temp
+
+
+	def test(self, testdata, testlabels):
+		acc = 0
+		datalen = len(testdata)
+		for i in range(100):
+			data = testdata[i]
+			label = testlabels[i]
+			guess = self.process(data)
+			guess = largest_index(guess)
+			numberlabel = largest_index(label)
+			error = self.mse(data, label)
+			
+			verdict = ""
+			if guess == numberlabel:
+				verdict = "correct"
+				acc += 1
+			else:
+				verdict = "fail"
+			print("answer: %d, guess: %i, error: %s, verdict: %s" % (numberlabel, 
+														guess, 
+														error, 
+														verdict,))
+		accuracy = percent(acc, 100)
+		print("")
+		print("accuracy: %i%%" % (accuracy))
+
+
+	def process_all(self, inputs):
+		for i in range(len(inputs)):
+			data = inputs[i]
+			guess = self.process(data)
+			guess = largest_index(guess)
+			print("input number: %d, guess: %f" % (i, guess))
+
 
 	# feed the inputs forward through the network
 	def process(self, inputArray):
-		if(len(inputArray) != self.inputNodes):
-			raise Exception("the number of inputs must match the number of inputNodes")
+		# if(len(inputArray) != self.inputNodes):
+		# 	raise Exception("the number of inputs must match the number of inputNodes", len(inputArray))
 
 		# feedforward algorithm
 		inputs = np.array(inputArray)
@@ -133,8 +178,10 @@ class perceptron:
 
 	# calculate the mean squared error, could be incorrect
 	def mse(self, inputArray, goalArray):
+		goal = np.array(goalArray)
+		goal = goal.reshape(self.outputNodes, 1)
 		guess = self.process(inputArray)
-		return np.sum((goalArray-guess)**2)/len(goalArray)
+		return np.sum((goal-guess)**2)/len(goal)
 
 
 	# calculate the root mean squared error, could be incorrect
