@@ -57,6 +57,7 @@ The program no longer graphs the error.
 ## To Do List
 
 - [ ] fix mse and rmse - currently they are my best guess as to how those function work, but they could very well be wrong (see [#2](https://github.com/GypsyDangerous/Python-Neural-Network/issues/2))
+- [ ] add functionality to save hyperparameters of a model
 - [ ] add other loss functions like cross entropy
 - [ ] refactor the code
 - [ ] add more documentation with commments inside the code
