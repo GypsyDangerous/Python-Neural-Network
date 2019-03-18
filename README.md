@@ -46,6 +46,7 @@ To test the network, simply use ``.test`` on you testdata and testlabels, To use
 Currently the network is being tested on XOR. It outputs every epoch for the training cycle and then when it is finished training it displays the networks guess and graphs the error. you can see the network run on MNIST data [here](https://github.com/GypsyDangerous/MNIST-digit-classifier/)
 ![guesses](https://i.imgur.com/4mbQmLi.png)   
 ![error](https://i.imgur.com/LFpAf3Q.png)  
+The program no longer graphs the error.
 
 ## To Do List
 
