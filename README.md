@@ -65,7 +65,7 @@ The program no longer graphs the error.
 - [ ] add more activation functions
 - [ ] add functionality for mini batch training
 - [x] run this network on MNIST or similiar dataset [here](https://github.com/GypsyDangerous/MNIST-digit-classifier)
-- [ ] add recurent neural network and convolutional neural network
+- [ ] add a recurent neural network and convolutional neural network
 
 ## Credits and links to learn more
 
