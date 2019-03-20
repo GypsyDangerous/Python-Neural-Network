@@ -1,6 +1,6 @@
 # Python Neural Network
 
-A simple deep neural network I made in python on my quest to understand machine learning and neural networks.
+A simple deep neural network I made in python with numpy on my quest to understand machine learning and neural networks.
 
 
 ## Files
