@@ -21,16 +21,23 @@ The network is a simple deep neural network with 5 variable number of input node
 the network is object oriented, so you can bring it in to your program by importing the file ``perceptron.py`` and creating a variable for a neural network. The network takes in 5 variables for the constructor function. the number of inputs, layers, hiddens, outputs, and epochs, in that order.
 
 ### Functions
-
+#### learning rate
 * setLearningRate - sets the networks learning rate.
 * getLearningRate - returns the networks learning rate.
+* dec_learningRate - reduces the networks learning rate by a given amount, default is .00001.
+#### epochs
 * setEpochs - sets the networks training epochs.
 * getEpochs - returns the networks training epochs.
+* inc_Epochs - increases the networks epochs by a given amount, default is 1000
+#### training
 * fit - run the train function on the training data ``self.epochs`` number of times
 * train - uses backpropagation and stochastic gradient descent to train the network.
+#### testing
+* test - takes in training data and training labels, runs the data through the network, compares to the label and gives you the networks accuracy for the training data.
+#### getting prediction
 * process - uses feedforward to guess the output of an input.
 * process_all - takes in a collection of unknown data and outputs the guess for each.
-* test - takes in training data and training labels, runs the data through the network, compares to the label and gives you the networks accuracy.
+
 
 
 ### Training
