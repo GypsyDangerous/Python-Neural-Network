@@ -24,15 +24,16 @@ def largest_index(guess):
 
 class perceptron:
 	# initialize the Network with hyperparameters
-	def __init__(self, inputs, layers, hidden, output, epochs):
+	def __init__(self, inputs, layers=1, hidden, output, epochs=10, learning_rate=.01, minibatch_size=1):
 		self.inputNodes = int(inputs)
 		self.hiddenlayers = int(layers)
 		self.hiddenNodes = int(hidden)
 		self.outputNodes = int(output)
 		self.epochs = epochs
 		self.accuracy = 0
+		self.minibatch_size = minibatch_size
 
-		self.learningRate = .1
+		self.learningRate = learning_rate
 
 		self.weights = []
 
@@ -52,7 +53,7 @@ class perceptron:
 			else:
 				self.biases.append(2*np.random.rand(self.hiddenNodes, 1)-1)
 
-
+	#functions for adjusting and retrieving hyperparameters
 	def setEpochs(self, x):
 		self.epochs = x
 
@@ -61,16 +62,21 @@ class perceptron:
 
 	def incEpochs(self, inc=1000):
 		self.epochs+=inc
+	
+	def decEpochs(self, dec=1000):
+		self.epochs-=inc
 
 	def setLearningRate(self, x):
 		self.learningRate = x
 
-
 	def getLearningRate(self):
 		return self.learningRate
+	
+	def inc_learningRate(self, inc=.00001):
+		self.learningRate += inc
 
-	def dec_learningRate(self, inc=.00001):
-		self.learningRate -= inc
+	def dec_learningRate(self, dec=.00001):
+		self.learningRate -= dec
 
 
 	# automatically prepare the data from given training data and labels and run the train function epochs number of times
