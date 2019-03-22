@@ -17,8 +17,8 @@ The only non-native module that this program uses is numpy, so to use this neura
 
 ## The Network
 
-The network is a simple deep neural network with 5 variable number of input nodes, hidden layers, hidden nodes in those layers, output nodes, and training epochs ``(batch size is coming soon, currently it is a batch size of 1)``. Though it is a deep neural network it is not the most efficient code.
-the network is object oriented, so you can bring it in to your program by importing the file ``perceptron.py`` and creating a variable for a neural network. The network takes in 5 variables for the constructor function. the number of inputs, layers, hiddens, outputs, and epochs, in that order.
+The network is a simple deep neural network with 5 variable number of input nodes, hidden layers, hidden nodes in those layers, output nodes, and training epochs ``(batch size is coming soon, currently it is a batch size of 1)``.
+the network is object oriented, so you can bring it in to your program by importing the file ``NeuralNetwork.py`` and creating a variable for a neural network. The network takes in 5 variables for the constructor function. the number of inputs, layers, hiddens, outputs, and epochs, in that order.
 
 ### Functions
 #### learning rate
