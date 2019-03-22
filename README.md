@@ -69,7 +69,7 @@ Currently the network is being tested on XOR. It outputs every epoch for the tra
 - [ ] refactor the code
 - [ ] add more documentation with commments inside the code
 - [ ] add functionality for easy switching between different activation functions
-- [ ] add more activation functions
+- [x] add more activation functions
 - [ ] add functionality for mini batch training
 - [x] run this network on MNIST or similiar dataset [here](https://github.com/GypsyDangerous/MNIST-digit-classifier)
 - [ ] add a recurent neural network and convolutional neural network
