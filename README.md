@@ -47,7 +47,7 @@ Training the network involves creating a for loop over the networks epochs, crea
 ![epochs](https://i.imgur.com/9JVRjhB.png)
 ![Training](https://i.imgur.com/DQp5Y3t.png)  
 * fit function  
-![fit](https://i.imgur.com/6oVoRrw.png)
+![fit](https://i.imgur.com/GytVxFv.png)
 
 ### Testing/Predicting
 
