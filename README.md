@@ -64,7 +64,7 @@ Currently the network is being tested on XOR. It outputs every epoch for the tra
 ## To Do List
 
 - [ ] fix mse and rmse - currently they are my best guess as to how those function work, but they could very well be wrong (see [#2](https://github.com/GypsyDangerous/Python-Neural-Network/issues/2))
-- [ ] add functionality to save hyperparameters of a model
+- [X] add functionality to save a model
 - [ ] add other loss functions like cross entropy
 - [ ] refactor the code
 - [ ] add more documentation with commments inside the code
@@ -72,7 +72,6 @@ Currently the network is being tested on XOR. It outputs every epoch for the tra
 - [x] add more activation functions
 - [ ] add functionality for mini batch training
 - [x] run this network on MNIST or similiar dataset [here](https://github.com/GypsyDangerous/MNIST-digit-classifier)
-- [ ] add a recurent neural network and convolutional neural network
 
 ## Credits and links to learn more
 
