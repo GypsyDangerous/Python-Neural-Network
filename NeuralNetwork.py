@@ -24,7 +24,7 @@ def largest_index(guess):
 
 class perceptron:
 	# initialize the Network with hyperparameters
-	def __init__(self, inputs, layers=1, hidden, output, epochs=10, learning_rate=.01, minibatch_size=1):
+	def __init__(self, inputs, hidden, output, layers=1, epochs=10, learning_rate=.01, minibatch_size=1):
 		self.inputNodes = int(inputs)
 		self.hiddenlayers = int(layers)
 		self.hiddenNodes = int(hidden)
