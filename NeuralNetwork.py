@@ -202,6 +202,11 @@ class perceptron:
 
 
 	# calculate the root mean squared error, could be incorrect
+	from sklearn.metrics import mean_squared_error
+	from math import sqrt
+
+	rms = sqrt(mean_squared_error(y_actual, y_predicted))
+	
 	def rmse(self, inputArray, goalArray):
 		return sqrt((self.mse(inputArray, goalArray)/4))
 
