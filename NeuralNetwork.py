@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from matplotlib import style
 from activations import * # sigmoid, sigmoid_p
+from sklearn.metrics import mean_squared_error
+from math import sqrt
 
 # percentage and truncate functions used in displaying training completion
 def truncate(x, level=100):
@@ -195,15 +197,11 @@ class perceptron:
 
 	# calculate the mean squared error, could be incorrect
 	def mse(self, inputArray, goalArray):
-		goal = np.array(goalArray)
-		goal = goal.reshape(self.outputNodes, 1)
-		guess = self.process(inputArray)
-		return np.sum((goal-guess)**2)/len(goal)
-
-
+		self (mean_squared_error(goalArray, inputArray))
+		
 	# calculate the root mean squared error, could be incorrect
 	def rmse(self, inputArray, goalArray):
-		return sqrt((self.mse(inputArray, goalArray)/4))
+		return sqrt(mean_squared_error(goalArray, inputArray))
 
 	def load(self, filename='model.npz'):
 
